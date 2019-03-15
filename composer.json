@@ -1,6 +1,9 @@
 {
     "name": "jeydotc/jeydotc-enumerable",
     "description": "An enumerable class that mimics the concepts of .Net's IEnumerable interface, but with slight adaptations for PHP.",
+    "homepage": "https://github.com/JeyDotC/jeydotc-enumerable",
+    "license": "MIT",
+    "keywords": ["enumerable","ienumerable", "collection", "collections", "immutable"],
     "authors": [
         {
             "name": "Jeysson Guevara",
