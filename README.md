@@ -1,3 +1,4 @@
+
 # Enumerable class!
 
 ```php
@@ -20,4 +21,10 @@ $theOmega = $myEnumerable->last();
 // 10
 
 // And many more...
+```
+
+## Installation
+
+```bash
+composer install jeydotc/jeydotc-enumerable
 ```
