@@ -1,5 +1,5 @@
 {
-    "name": "jobsity/jeydotc-enumerable",
+    "name": "jeydotc/jeydotc-enumerable",
     "description": "An enumerable class that mimics the concepts of .Net's IEnumerable interface, but with slight adaptations for PHP.",
     "authors": [
         {
