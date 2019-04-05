@@ -185,7 +185,16 @@ interface IEnumerable extends \IteratorAggregate, \Serializable, \Countable
      * @return IEnumerable The elements from this enumerable after skipping the first $count elements. 
      */
     public function skip(int $count) : IEnumerable;
+    
+    /**
+     * Calls the given callable for each element in this enumerable. 
+     * 
+     * @param callable $callback A callable that will receive the current value as the first parameter and the key as the second parameter.
+     * @return void
+     */
+    public function each(callable $callback): void;
 
+    // public function countIf();
     // public function takeWhile();
     // public function skipWhile();
     // public function sum();

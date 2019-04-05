@@ -568,6 +568,25 @@ trait IEnumerableContractTests
         // Assert
         $this->assertEquals($expectedResult, $actualResult->toArray());
     }
+    
+    public function testEach() {
+        // Arrange
+        $visitedItems = [];
+        $enumerable = $this->enumerableFrom(self::$basicSampleDataWithKeys);
+        $originalData = $enumerable->toArray();
+
+        // Act
+        $enumerable->each(function($value, $key) use(&$visitedItems) {
+            $visitedItems[$value] = $key;
+        });
+
+        // Assert
+        $this->assertEquals($originalData, $enumerable->toArray());
+        $this->assertEquals([
+            'A' => 'One',
+            'B' => 'Two',
+            'C' => 'Three', ], $visitedItems);
+    }
 
     // <editor-fold defaultstate="expanded" desc="Data Providers">
 

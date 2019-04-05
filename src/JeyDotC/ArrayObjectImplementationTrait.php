@@ -308,6 +308,15 @@ trait ArrayObjectImplementationTrait
 
         return Enumerable::from($result);
     }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function each(callable $callback): void{
+        foreach ($this->implementationDelegate as $key => $value){
+            $callback($value, $key);
+        }
+    }
 
     /**
      * {@inheritDoc}
