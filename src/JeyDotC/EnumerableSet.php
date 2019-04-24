@@ -22,7 +22,10 @@ class EnumerableSet implements ISet
 
     public function __construct(callable $equalityComparer = null, $input = array(), int $flags = 0, string $iterator_class = "ArrayIterator") {
         $this->equals = $equalityComparer ?? function($value1, $value2) {
-            return $value1 == $value2;
+            $value1IsObject = is_object($value1);
+            $value2IsObject = is_object($value2);
+            
+            return ($value1IsObject == $value2IsObject) && ($value1 == $value2);
         };
 
         $data = $input instanceof IEnumerable ? $input->toArray() : $input;
